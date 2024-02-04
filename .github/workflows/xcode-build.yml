@@ -2,12 +2,13 @@ name: App build
 on: push
 
 jobs:
-  build_with_signing:
+  build:
     runs-on: macos-latest
+    strategy:
+      matrix:
+        platform:
+          - macOS
     steps:
-      - name: Build app
-        uses: sersoft-gmbh/xcodebuild-action@v3
+      - uses: mxcl/xcodebuild@v1
         with:
-          project: MacSleep.xcodeproj
-          destination: platform=macOS
           action: build
