@@ -8,7 +8,7 @@ jobs:
       - name: Build app
         uses: sersoft-gmbh/xcodebuild-action@v3
         with:
-          project: MyApp.xcodeproj
-          scheme: MyApp
+          project: MacSleep.xcodeproj
+          scheme: MacSleep
           destination: platform=macOS
           action: build
