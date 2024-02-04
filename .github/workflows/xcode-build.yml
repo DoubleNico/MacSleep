@@ -1,0 +1,14 @@
+name: App build
+on: push
+
+jobs:
+  build_with_signing:
+    runs-on: macos-latest
+    steps:
+      - name: Build app
+        uses: sersoft-gmbh/xcodebuild-action@v3
+        with:
+          project: MyApp.xcodeproj
+          scheme: MyApp
+          destination: platform=macOS
+          action: build
