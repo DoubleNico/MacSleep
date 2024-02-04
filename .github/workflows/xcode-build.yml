@@ -9,6 +9,5 @@ jobs:
         uses: sersoft-gmbh/xcodebuild-action@v3
         with:
           project: MacSleep.xcodeproj
-          scheme: MacSleep
           destination: platform=macOS
           action: build
